@@ -28,6 +28,9 @@ DEBUG = True
 #We use "*" to allow all hosts
 ALLOWED_HOSTS = ["*"]
 
+#Custom User model. Django's auth system,
+# middleware and admin site assume one model for all users.
+AUTH_USER_MODEL = "usuarios.Usuario"
 
 # Application definition
 
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "usuarios.app.UsuariosConfig"
 ]
 
 MIDDLEWARE = [
